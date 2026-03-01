@@ -13,7 +13,7 @@ app = FastAPI(title="Tasks API")
 
 FRONTEND_ORIGINS = [
     "http://localhost:5173",
-    "https://task-web-wnbe.onrender.com/",  # <- cambia esto por tu URL real
+    "https://task-web-wnbe.onrender.com",  # <- cambia esto por tu URL real
 ]
 
 app.add_middleware(
