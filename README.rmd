@@ -56,6 +56,14 @@ Swagger API Docs: `https://task-api-06t2.onrender.com/docs`
 
 ---
 
+## Explicacion
+En primer lugar nos aparecera la pantalla de login,
+luego ingresndo las credenciales nos aparecera nuestro 
+dashboard para poder ingresar las tareas.
+unas ve ingresadas las tareas, podemos filtrar por las difrentes estados
+como especifica la tarea.
+una vez hecha pues podemos eliminarla.
+
 ## Levantar en local
 
 ### 1) Backend (FastAPI)
