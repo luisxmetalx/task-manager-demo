@@ -11,9 +11,14 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Tasks API")
 
+FRONTEND_ORIGINS = [
+    "http://localhost:5173",
+    "https://task-web-wnbe.onrender.com/",  # <- cambia esto por tu URL real
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # ajusta cuando deployes
+    allow_origins=FRONTEND_ORIGINS,  # ajusta cuando deployes
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
