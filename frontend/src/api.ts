@@ -1,9 +1,11 @@
 import axios from "axios";
 import { getToken, clearToken } from "./auth";
 
-export const api = axios.create({
-  baseURL: "http://127.0.0.1:8000",
-});
+const baseURL =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV ? "http://127.0.0.1:8000" : "");
+
+export const api = axios.create({ baseURL });
 
 api.interceptors.request.use((config) => {
   const token = getToken();
