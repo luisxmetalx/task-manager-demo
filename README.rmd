@@ -1,0 +1,69 @@
+# Task Manager (Demo)
+
+Aplicación web tipo SPA para gestión de tareas internas:
+- Inicio de sesión
+- Crear, ver, editar y eliminar tareas
+- Prioridad (low/medium/high)
+- Filtro por estado (all/pending/in_progress/completed)
+
+> Demo enfocada a prueba técnica fullstack.
+
+---
+
+## Tecnologías usadas
+
+### Frontend
+- React + TypeScript (Vite)
+- Tailwind CSS v3
+- Axios
+- React Router
+
+### Backend
+- Python + FastAPI
+- SQLite
+- SQLAlchemy
+- JWT (autenticación)
+
+### Deploy
+- Render (Backend + Frontend)
+
+---
+
+## URL de la aplicación (Producción)
+
+Frontend (Render): `https://task-web-wnbe.onrender.com` 
+Backend (Render): `https://task-api-06t2.onrender.com`  
+Swagger API Docs: `https://task-api-06t2.onrender.com/docs`
+
+---
+
+## Credenciales demo
+
+- Usuario: `admin`
+- Contraseña: `admin123`
+
+---
+
+## Funcionalidades principales
+
+- **Login**: obtiene token JWT.
+- **Tasks CRUD**:
+  - `GET /tasks` (lista)
+  - `GET /tasks?status=pending` (filtro por estado)
+  - `POST /tasks` (crear)
+  - `PUT /tasks/{id}` (editar)
+  - `DELETE /tasks/{id}` (eliminar)
+
+---
+
+## Levantar en local
+
+### 1) Backend (FastAPI)
+Desde la carpeta `backend/`:
+
+```bash
+python -m venv .venv
+# Windows PowerShell:
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
