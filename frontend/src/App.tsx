@@ -1,11 +1,12 @@
+import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Tasks from "./pages/Tasks";
 import TaskForm from "./pages/TaskForm";
 import { getToken } from "./auth";
 
-function Private({ children }: { children: JSX.Element }) {
-  return getToken() ? children : <Navigate to="/login" replace />;
+function Private({ children }: { children: React.ReactNode }) {
+  return getToken() ? <>{children}</> : <Navigate to="/login" replace />;
 }
 
 export default function App() {
